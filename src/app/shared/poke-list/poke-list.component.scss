@@ -1,0 +1,79 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host{
+  .listagem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: rem-calc(20) 0;
+
+    .pokemon{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: 49%;
+      height: rem-calc(157);
+      background: var(--branco);
+      margin-bottom: rem-calc(20);
+
+      border-radius: rem-calc(10);
+      justify-content: space-between;
+      align-items: center;
+
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .pokemon-status{
+      display: flex;
+      height: 70%;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      margin-left: rem-calc(20);
+    }
+
+    .pokeon-status ul{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pokemon-status li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(239, 239, 239, 1);
+      border-radius: rem-calc(32);
+      font-size: rem-calc(10);
+      font-weight: 400;
+      padding: rem-calc(3) rem-calc(12);
+      margin-bottom: rem-calc(5);
+    }
+
+    .pokemon-status h2{
+      font-weight: 700;
+      font-style: italic;
+      text-transform: capitalize;
+      font-size: rem-calc(22);
+      margin-bottom: rem-calc(10);
+    }
+
+    .pokemon-img{
+      height: rem-calc(90);
+      width: rem-calc(110);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: rem-calc(20);
+      margin-top: rem-calc(47);
+      background: url("../../../assets/backgrond-list-pokemons.svg") no-repeat;
+    }
+
+    .pokemon-img img{
+      width: rem-calc(80);
+      height: rem-calc(80);
+      object-fit: contain;
+    }
+  }
+}

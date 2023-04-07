@@ -1,0 +1,36 @@
+<poke-header></poke-header>
+
+<main class="details">
+  <ng-template [ngIf]="isLoading">
+    <section class="box-names">
+      <h1 class="nome slideInLeft">{{ infoPoke.name }}</h1>
+      <h2 class="nome-japa slideInRight">{{ nameJapan }}</h2>
+    </section>
+
+    <section class="container fadeIn">
+      <label class="stats"> Estatisticas</label>
+
+      <ul *ngFor="let info of infoPoke.stats">
+        <div>
+          <li class="name">{{ info.stat.name }}</li>
+          <li class="number">{{ info.base_stat }}</li>
+        </div>
+      </ul>
+
+      <input type="submit" value="Voltar" [routerLink]="['']" />
+
+      <img
+        [src]="infoPoke.sprites.other.dream_world.front_default"
+        [alt]="infoPoke.name"
+        class="slideInDown"
+      />
+    </section>
+  </ng-template>
+
+  <img
+    src="assets/error.svg"
+    alt="Deu erro mostrando o pokemon"
+    width="100%"
+    *ngIf="apiError"
+  />
+</main>
